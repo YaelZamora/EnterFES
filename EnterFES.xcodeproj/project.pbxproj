@@ -11,6 +11,9 @@
 		7E5B3EBD2A25331200443313 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B3EBC2A25331200443313 /* ContentView.swift */; };
 		7E5B3EBF2A25331400443313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B3EBE2A25331400443313 /* Assets.xcassets */; };
 		7E5B3EC22A25331400443313 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B3EC12A25331400443313 /* Preview Assets.xcassets */; };
+		7E5B3EC92A25370700443313 /* QRGenerateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B3EC82A25370700443313 /* QRGenerateView.swift */; };
+		7E5B3ECB2A253B7400443313 /* ScanCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B3ECA2A253B7400443313 /* ScanCodeView.swift */; };
+		7E5B3ECE2A253C2E00443313 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 7E5B3ECD2A253C2E00443313 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,8 @@
 		7E5B3EBC2A25331200443313 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E5B3EBE2A25331400443313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E5B3EC12A25331400443313 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E5B3EC82A25370700443313 /* QRGenerateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRGenerateView.swift; sourceTree = "<group>"; };
+		7E5B3ECA2A253B7400443313 /* ScanCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5B3ECE2A253C2E00443313 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +59,8 @@
 			children = (
 				7E5B3EBA2A25331200443313 /* EnterFESApp.swift */,
 				7E5B3EBC2A25331200443313 /* ContentView.swift */,
+				7E5B3EC82A25370700443313 /* QRGenerateView.swift */,
+				7E5B3ECA2A253B7400443313 /* ScanCodeView.swift */,
 				7E5B3EBE2A25331400443313 /* Assets.xcassets */,
 				7E5B3EC02A25331400443313 /* Preview Content */,
 			);
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = EnterFES;
+			packageProductDependencies = (
+				7E5B3ECD2A253C2E00443313 /* CodeScanner */,
+			);
 			productName = EnterFES;
 			productReference = 7E5B3EB72A25331200443313 /* EnterFES.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 7E5B3EAE2A25331200443313;
+			packageReferences = (
+				7E5B3ECC2A253C2E00443313 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 7E5B3EB82A25331200443313 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,7 +151,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5B3ECB2A253B7400443313 /* ScanCodeView.swift in Sources */,
 				7E5B3EBD2A25331200443313 /* ContentView.swift in Sources */,
+				7E5B3EC92A25370700443313 /* QRGenerateView.swift in Sources */,
 				7E5B3EBB2A25331200443313 /* EnterFESApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,6 +286,8 @@
 				DEVELOPMENT_TEAM = VP5MJD3LR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Enter FES";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Quiero usar la cámara";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +317,8 @@
 				DEVELOPMENT_TEAM = VP5MJD3LR4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Enter FES";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Quiero usar la cámara";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +359,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7E5B3ECC2A253C2E00443313 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7E5B3ECD2A253C2E00443313 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E5B3ECC2A253C2E00443313 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7E5B3EAF2A25331200443313 /* Project object */;
 }
